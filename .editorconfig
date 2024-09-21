@@ -1,27 +1,34 @@
-#copied fro audiophile
-
-# top-most EditorConfig file
+# Top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
+# General settings: Default to Unix-style newlines and clean-up
 [*]
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 charset = utf-8
 
-# 4 space indentation
-[*.{py}]
+# 4 space indentation for Python files
+[*.py]
 indent_style = space
 indent_size = 4
 profile = black
 
-# 2 space indentation
-[*.{js,json,y{a,}ml,html,cwl}]
+# 2 space indentation for JavaScript, JSON, YAML, HTML, CWL files
+[*.{js,json,yml,html,cwl}]
 indent_style = space
 indent_size = 2
 
+# Markdown, RMarkdown, and reStructuredText: No trimming trailing whitespace
 [*.{md,Rmd,rst}]
 trim_trailing_whitespace = false
 indent_style = space
 indent_size = 2
+
+# Unix-specific files: Use LF line endings
+[*.{sh,bash}]
+end_of_line = lf
+
+# Windows-specific files: Use CRLF line endings
+[*.{bat,ps1}]
+end_of_line = crlf

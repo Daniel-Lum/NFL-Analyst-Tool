@@ -1,0 +1,42 @@
+# Normalize all text files to LF in the repository
+* text=auto
+
+# Specific line endings based on file type
+# Unix-specific files: Ensure LF line endings
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Windows-specific files: Ensure CRLF line endings
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Python files: Ensure LF line endings
+*.py text eol=lf
+
+# JavaScript, JSON, YAML, HTML, CWL: Ensure LF line endings
+*.js text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.html text eol=lf
+*.cwl text eol=lf
+
+# Markdown, RMarkdown, and reStructuredText: Ensure LF line endings
+*.md text eol=lf
+*.Rmd text eol=lf
+*.rst text eol=lf
+
+# SQL files: Ensure LF line endings and make them detectable by GitHub's Linguist
+*.sql text eol=lf
+*.sql linguist-detectable=true
+
+# Binary files: Prevent Git from attempting diffs or merges
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+
+# Lock specific binary files to prevent concurrent edits
+*.psd lock
+*.ai lock

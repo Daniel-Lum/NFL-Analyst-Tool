@@ -6,7 +6,7 @@ output "aws_region" {
 
 output "bucket_name" {
   description = "S3 bucket name."
-  value       = aws_s3_bucket.audiophile-bucket.id
+  value       = aws_s3_bucket.nflat-bucket.id
 }
 
 output "redshift_password" {
@@ -16,22 +16,22 @@ output "redshift_password" {
 
 output "redshift_user" {
   description = "Username for the database in the Redshift cluster"
-  value       = aws_redshift_cluster.audiophile_cluster.master_username
+  value       = aws_redshift_cluster.nflat_cluster.master_username
 }
 
 output "redshift_port" {
   description = "Port of the database in the Redshift cluster"
-  value       = aws_redshift_cluster.audiophile_cluster.port
+  value       = aws_redshift_cluster.nflat_cluster.port
 }
 
 output "redshift_host" {
   description = "Host to connect to the Redshift cluster"
-  value       = aws_redshift_cluster.audiophile_cluster.endpoint
+  value       = aws_redshift_cluster.nflat_cluster.endpoint
 }
 
 output "redshift_database" {
   description = "Database name in the Redshift cluster"
-  value       = aws_redshift_cluster.audiophile_cluster.database_name
+  value       = aws_redshift_cluster.nflat_cluster.database_name
 }
 
 output "rds_database_name" {
